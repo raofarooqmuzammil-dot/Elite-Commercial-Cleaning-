@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Commercial Cleaning | Premium Cleaning Services</title>
+    <meta
+      name="description"
+      content="Elite Commercial Cleaning delivers premium residential, commercial, Airbnb, and construction cleaning across MD, VA, and DE. Book fast, request a quote, or chat on WhatsApp."
+    />
+    <meta property="og:title" content="Elite Commercial Cleaning | Premium Cleaning Services" />
+    <meta
+      property="og:description"
+      content="Trusted cleaning for homes, offices, clinics, rentals and construction sites. Same-day quotes, eco-friendly supplies, and 5-star service."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581579184599-6df3a5597196?auto=format&fit=crop&w=1200&q=80" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-Ho3NATcYxiuZ1qN4gZA0u9R8lCkUs8QO1thVxJKHQFOWruSTY16h+h5zBguM5xD6VQszxWR34u8dxSWGdMa6+Ig=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#ebf7f4',
+                100: '#d8efe7',
+                200: '#b6dfd3',
+                300: '#84c9b4',
+                400: '#4fb58f',
+                500: '#2d9375',
+                600: '#256e5f',
+                700: '#1e5c50',
+                800: '#1b4b44',
+                900: '#173f3a'
+              },
+              surface: '#ffffff1a'
+            },
+            boxShadow: {
+              glow: '0 20px 80px rgba(11, 46, 77, 0.18)',
+              soft: '0 18px 40px rgba(15, 47, 81, 0.12)'
+            },
+            backgroundImage: {
+              'hero-pattern': "radial-gradient(circle at top, rgba(79,181,143,.15), transparent 30%), radial-gradient(circle at 20% 10%, rgba(255,255,255,.2), transparent 22%), linear-gradient(180deg, rgba(8,20,45,.95), rgba(12,27,57,.98))"
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #071424;
+        color: #f8fafc;
+        scroll-behavior: smooth;
+      }
+      .glass-card {
+        backdrop-filter: blur(18px);
+        background: rgba(15, 32, 66, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .floating-pulse {
+        animation: pulse 2.4s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.08); opacity: 0.76; }
+      }
+      .divider-wave {
+        position: relative;
+      }
+      .divider-wave svg {
+        display: block;
+        width: 100%;
+        height: 88px;
+      }
+      .range-slider {
+        appearance: none;
+        width: 100%;
+        height: 4px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #2ace8e 0%, #2b82e7 100%);
+        outline: none;
+      }
+      .range-slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        border-radius: 999px;
+        background: #ffffff;
+        border: 3px solid #2ace8e;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity .6s ease, transform .6s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .hero-bg {
+        background-image: url('https://images.unsplash.com/photo-1581093588401-5c0a495d6781?auto=format&fit=crop&w=1400&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+      .hero-overlay {
+        background: linear-gradient(180deg, rgba(9, 25, 43, 0.36), rgba(8, 18, 37, 0.9));
+      }
+      .lazy-image {
+        opacity: 0;
+        transition: opacity .8s ease;
+      }
+      .lazy-image.loaded {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
+      <!-- Sticky navigation -->
+      <header class="sticky top-0 z-50 border-b border-slate-800/70 bg-slate-950/95 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <a href="#home" class="flex items-center gap-3 text-white">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-sky-700 shadow-glow">
+              <span class="text-xl font-bold">E</span>
+            </div>
+            <div>
+              <p class="text-sm uppercase tracking-[0.22em] text-brand-300">Elite Commercial Cleaning</p>
+              <p class="text-xs text-slate-400">Premium cleaning for MD · VA · DE</p>
+            </div>
+          </a>
+          <nav class="hidden items-center gap-8 lg:flex">
+            <a href="#services" class="text-slate-300 transition hover:text-white">Services</a>
+            <a href="#why" class="text-slate-300 transition hover:text-white">Why Us</a>
+            <a href="#testimonials" class="text-slate-300 transition hover:text-white">Reviews</a>
+            <a href="#contact" class="text-slate-300 transition hover:text-white">Book</a>
+          </nav>
+          <div class="hidden items-center gap-4 lg:flex">
+            <a href="https://wa.me/14437366460?text=Hi%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-brand-500 bg-brand-500/10 px-4 py-2 text-sm font-semibold text-brand-100 transition hover:bg-brand-500/20">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-brand-200" viewBox="0 0 24 24"><path d="M20.52 3.48A11.848 11.848 0 0012 .2C5.66.2.93 4.92.93 11.25c0 1.98.52 3.92 1.5 5.64L.2 24l7.4-1.94a11.07 11.07 0 005.05 1.17h.01c6.35 0 11.07-4.72 11.07-11.07 0-2.96-1.15-5.74-3.12-7.58zM12 21.67h-.01a9.78 9.78 0 01-4.96-1.34l-.36-.22-4.39 1.15 1.18-4.34-.23-.36A9.77 9.77 0 012.29 11.25c0-5.38 4.38-9.76 9.76-9.76 2.61 0 5.07 1.02 6.91 2.86a9.66 9.66 0 012.86 6.9c.01 5.38-4.37 9.75-9.75 9.75zm5.34-7.78c-.29-.14-1.7-.84-1.97-.94-.27-.1-.47-.14-.67.14-.19.28-.75.94-.92 1.13-.17.2-.35.24-.65.08-.29-.14-1.23-.45-2.34-1.45-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.12-.6.12-.12.27-.31.41-.47.14-.16.18-.28.28-.47.1-.19.05-.35-.02-.49-.08-.14-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01-.2 0-.52.08-.79.37-.27.29-1.07 1.04-1.07 2.55 0 1.51 1.1 2.97 1.25 3.18.14.2 2.16 3.3 5.24 4.63.73.31 1.3.49 1.75.63.74.23 1.41.2 1.94.12.59-.09 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.08-.11-.28-.18-.58-.31z"/></svg>
+              WhatsApp Chat
+            </a>
+          </div>
+          <button id="mobile-menu-button" class="lg:hidden rounded-2xl border border-slate-700/70 bg-slate-950/90 p-3 text-slate-200 shadow-soft">
+            <span class="sr-only">Open main menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div id="mobile-menu" class="fixed inset-x-4 top-20 z-40 hidden rounded-3xl border border-slate-700/80 bg-slate-950/95 p-6 shadow-glow backdrop-blur-xl lg:hidden">
+        <div class="flex flex-col gap-4">
+          <a href="#services" class="text-base font-medium text-slate-100">Services</a>
+          <a href="#why" class="text-base font-medium text-slate-100">Why Us</a>
+          <a href="#testimonials" class="text-base font-medium text-slate-100">Reviews</a>
+          <a href="#contact" class="text-base font-medium text-slate-100">Book</a>
+          <a href="https://wa.me/14437366460?text=Hi%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-400">
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <main id="home" class="relative overflow-hidden pb-24 pt-10 sm:pb-32 lg:pb-40">
+        <div class="hero-bg absolute inset-0 opacity-80"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative mx-auto flex max-w-7xl flex-col gap-8 px-6 lg:px-8">
+          <div class="grid gap-8 lg:grid-cols-[minmax(0,1.05fr)_0.95fr] lg:items-end">
+            <div class="space-y-6 pt-8 text-slate-100" data-aos="fade-up">
+              <div class="inline-flex items-center gap-3 rounded-full border border-slate-600/90 bg-slate-900/70 px-4 py-2 text-sm text-slate-200 shadow-soft">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-500 text-sm font-semibold">✔</span>
+                Same day service · customized quotes · discounts available
+              </div>
+              <h1 class="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Professional Cleaning Services That Make Your Space Shine
+              </h1>
+              <p class="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+                Elite Commercial Cleaning delivers premium residential, Airbnb, office, clinic and construction cleaning on the Eastern Shore of MD, VA & DE. Fast booking, eco-friendly care, and job-based pricing for every space.
+              </p>
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-brand-500/20 transition hover:bg-brand-400">
+                  Get Free Quote
+                </a>
+                <a href="https://wa.me/14437366460?text=Hi%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200/10 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15">
+                  <span>Book Cleaning</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+              <div class="grid gap-3 sm:grid-cols-3 sm:gap-4">
+                <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-4 shadow-soft">
+                  <p class="text-sm uppercase tracking-[0.24em] text-slate-400">Trusted by</p>
+                  <p class="mt-2 text-2xl font-semibold text-white">500+</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-4 shadow-soft">
+                  <p class="text-sm uppercase tracking-[0.24em] text-slate-400">Support</p>
+                  <p class="mt-2 text-2xl font-semibold text-white">24/7</p>
+                </div>
+                <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-4 shadow-soft">
+                  <p class="text-sm uppercase tracking-[0.24em] text-slate-400">Job Pricing</p>
+                  <p class="mt-2 text-2xl font-semibold text-white">Custom</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-glow" data-aos="fade-left">
+              <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-brand-500/30 to-transparent"></div>
+              <div class="relative rounded-[1.75rem] bg-slate-900/60 p-5 sm:p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-sm uppercase tracking-[0.3em] text-brand-200">Quick contact</p>
+                    <h2 class="mt-3 text-3xl font-semibold text-white">Chat + quote in seconds</h2>
+                  </div>
+                  <div class="rounded-3xl bg-brand-500/10 p-3 text-brand-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.848 11.848 0 0012 .2C5.66.2.93 4.92.93 11.25c0 1.98.52 3.92 1.5 5.64L.2 24l7.4-1.94a11.07 11.07 0 005.05 1.17h.01c6.35 0 11.07-4.72 11.07-11.07 0-2.96-1.15-5.74-3.12-7.58zM12 21.67h-.01a9.78 9.78 0 01-4.96-1.34l-.36-.22-4.39 1.15 1.18-4.34-.23-.36A9.77 9.77 0 012.29 11.25c0-5.38 4.38-9.76 9.76-9.76 2.61 0 5.07 1.02 6.91 2.86a9.66 9.66 0 012.86 6.9c.01 5.38-4.37 9.75-9.75 9.75zm5.34-7.78c-.29-.14-1.7-.84-1.97-.94-.27-.1-.47-.14-.67.14-.19.28-.75.94-.92 1.13-.17.2-.35.24-.65.08-.29-.14-1.23-.45-2.34-1.45-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.12-.6.12-.12.27-.31.41-.47.14-.16.18-.28.28-.47.1-.19.05-.35-.02-.49-.08-.14-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01-.2 0-.52.08-.79.37-.27.29-1.07 1.04-1.07 2.55 0 1.51 1.1 2.97 1.25 3.18.14.2 2.16 3.3 5.24 4.63.73.31 1.3.49 1.75.63.74.23 1.41.2 1.94.12.59-.09 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.08-.11-.28-.18-.58-.31z"/></svg>
+                  </div>
+                </div>
+                <div class="mt-6 rounded-[1.5rem] border border-white/10 bg-slate-950/90 p-5 shadow-soft">
+                  <div class="space-y-3">
+                    <div class="flex items-center justify-between text-sm text-slate-400">
+                      <span>WhatsApp reply</span>
+                      <span class="rounded-full bg-brand-500/10 px-3 py-1 text-brand-100">Fast</span>
+                    </div>
+                    <div class="rounded-3xl bg-slate-900/80 p-4 text-slate-200">
+                      <p class="text-sm leading-6">Hi Karen, I'm interested in a quote for move-out cleaning at my office in Eastern Shore.</p>
+                    </div>
+                    <div class="grid gap-3 sm:grid-cols-2">
+                      <div class="rounded-3xl border border-slate-800/80 bg-slate-900/75 p-4">
+                        <p class="text-sm text-slate-400">Instant replies</p>
+                        <p class="mt-2 font-semibold text-white"><span class="text-brand-300">1-2 min</span> response</p>
+                      </div>
+                      <div class="rounded-3xl border border-slate-800/80 bg-slate-900/75 p-4">
+                        <p class="text-sm text-slate-400">Job-based pricing</p>
+                        <p class="mt-2 font-semibold text-white">Custom quote</p>
+                      </div>
+                    </div>
+                    <div class="rounded-3xl border border-slate-800/80 bg-slate-900/75 p-4">
+                      <p class="text-sm text-slate-400">Fast booking</p>
+                      <p class="mt-1 text-white">Schedule same-day service in MD, VA, DE.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <section class="grid gap-6 rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-glow md:grid-cols-3 lg:p-8" data-aos="fade-up">
+          <div class="space-y-3">
+            <p class="text-sm uppercase tracking-[0.24em] text-slate-400">Trusted reviews</p>
+            <p class="text-3xl font-semibold text-white">4.9/5 average rating</p>
+            <div class="flex items-center gap-2 text-brand-400">
+              <span>★★★★★</span>
+              <span class="text-sm text-slate-300">Based on 120+ local reviews</span>
+            </div>
+          </div>
+          <div class="space-y-3 border-l border-slate-800/60 pl-4 sm:pl-6">
+            <p class="text-sm uppercase tracking-[0.24em] text-slate-400">Coverage</p>
+            <p class="text-xl font-semibold text-white">MD · VA · DE</p>
+            <p class="text-slate-400">Residential, commercial, clinics, rentals, new construction, remodels, and move-out cleaning.</p>
+          </div>
+          <div class="space-y-3 border-l border-slate-800/60 pl-4 sm:pl-6">
+            <p class="text-sm uppercase tracking-[0.24em] text-slate-400">Direct contact</p>
+            <p class="text-xl font-semibold text-white">+1 (443) 736-6460</p>
+            <p class="text-slate-400">WhatsApp and phone quotes available from Karen Ramirez.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Services -->
+      <section id="services" class="relative mt-20 overflow-hidden pb-24 pt-16">
+        <div class="divider-wave"><svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,120 L0,120 Z" fill="rgba(15,32,66,0.9)"></path></svg></div>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-4" data-aos="fade-right">
+              <p class="text-sm uppercase tracking-[0.35em] text-brand-300">Our services</p>
+              <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Premium cleaning services for every space</h2>
+              <p class="mt-4 max-w-xl text-slate-300">From move-out deep cleans to office and Airbnb turnovers, Elite Commercial Cleaning offers dependable care with trusted staff and eco-friendly tools.</p>
+            </div>
+            <div class="lg:col-span-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              <article class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="100">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-brand-500/15 text-brand-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H6zm-2 4v9a2 2 0 002 2h12a2 2 0 002-2V8H4zm5 2h6v5H9V10z"/></svg>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-white">Residential Cleaning</h3>
+                <p class="mt-3 text-slate-300">Effortless home cleaning with respectful teams and guaranteed satisfaction for busy homeowners.</p>
+              </article>
+              <article class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="150">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-sky-500/15 text-sky-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5h-3V3H6v2H3a1 1 0 00-1 1v13a2 2 0 002 2h16a2 2 0 002-2V6a1 1 0 00-1-1zm-7 2h2v2h-2V7zm-8 0h2v2H6V7zm0 4h2v2H6v-2zm4 0h8v2H10v-2zm0 4h8v2H10v-2z"/></svg>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-white">Deep Cleaning</h3>
+                <p class="mt-3 text-slate-300">Thorough sanitization for kitchens, bathrooms, appliances and detailed surfaces every visit.</p>
+              </article>
+              <article class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="200">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-green-500/15 text-green-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4V4zm0 4h16v9a3 3 0 01-3 3H7a3 3 0 01-3-3V8zm2 2v7a1 1 0 001 1h10a1 1 0 001-1V10H6z"/></svg>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-white">Office Cleaning</h3>
+                <p class="mt-3 text-slate-300">Polished workspaces, disinfected shared areas and fast set-ups for businesses of every size.</p>
+              </article>
+              <article class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="250">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-slate-500/15 text-slate-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h12v2H6V4zm0 4h12v2H6V8zm4 4h8v2h-8v-2zm-4 4h8v2H6v-2z"/></svg>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-white">Move-In/Move-Out</h3>
+                <p class="mt-3 text-slate-300">Rapid turnovers for move-ins and move-outs with intensive cleaning and staging-ready results.</p>
+              </article>
+              <article class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="300">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-fuchsia-500/15 text-fuchsia-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M5 5h14v14H5z" fill="none"/><path d="M21 7V5a2 2 0 00-2-2H5a2 2 0 00-2 2v2h18zM3 9v10a2 2 0 002 2h14a2 2 0 002-2V9H3zm6 3h2v2H9v-2z"/></svg>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-white">Airbnb Cleaning</h3>
+                <p class="mt-3 text-slate-300">Turnkey rental cleanings with rapid refresh, linen prep, and guest-ready presentation.</p>
+              </article>
+              <article class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="350">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-indigo-500/15 text-indigo-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v4H3V3zm0 6h18v12H3V9zm4 3h10v2H7v-2z"/></svg>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold text-white">Post-Construction</h3>
+                <p class="mt-3 text-slate-300">Construction debris removal, dust barrier cleaning and finishing touches for new builds.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why choose us -->
+      <section id="why" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div data-aos="fade-right">
+              <p class="text-sm uppercase tracking-[0.35em] text-brand-300">Why choose Elite Commercial Cleaning</p>
+            <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Trusted cleaning with premium service and a human touch</h2>
+            <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">Karen Ramirez leads a certified team focused on transparency, flexible job pricing, and reliable follow-through for homeowners, clinics, commercial clients, and rental hosts.</p>
+            <div class="mt-10 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Background checked cleaners</p>
+                <p class="mt-3 font-semibold text-white">Safe teams with vetted professionalism.</p>
+              </div>
+              <div class="rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Eco-friendly products</p>
+                <p class="mt-3 font-semibold text-white">Premium green formulas for healthier spaces.</p>
+              </div>
+              <div class="rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Affordable pricing</p>
+                <p class="mt-3 font-semibold text-white">Custom quotes priced per job.</p>
+              </div>
+              <div class="rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Satisfaction guarantee</p>
+                <p class="mt-3 font-semibold text-white">If you're not happy, we make it right.</p>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6" data-aos="fade-left">
+            <div class="glass-card rounded-[2rem] p-8 shadow-soft">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.24em] text-brand-300">Fast response</p>
+                  <p class="mt-3 text-xl font-semibold text-white">Same-day booking & fast quotes</p>
+                </div>
+                <div class="inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-brand-500/10 text-brand-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+              </div>
+              <p class="mt-5 text-slate-300">Emergency cleanings, move-outs, remodel finishes and new construction turnovers are available on short notice.</p>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="glass-card rounded-[2rem] p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">24/7 support</p>
+                <p class="mt-3 text-lg font-semibold text-white">A real person answers every request.</p>
+              </div>
+              <div class="glass-card rounded-[2rem] p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Job-based estimates</p>
+                <p class="mt-3 text-lg font-semibold text-white">Transparent pricing built around your exact needs.</p>
+              </div>
+            </div>
+            <div class="rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.24em] text-brand-300">Service area</p>
+                  <p class="mt-3 text-2xl font-semibold text-white">Maryland · Virginia · Delaware</p>
+                </div>
+                <span class="inline-flex rounded-full bg-brand-500/15 px-4 py-2 text-sm text-brand-200">Eastern Shore coverage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Before / After -->
+      <section class="relative overflow-hidden border-t border-slate-800/60 bg-slate-950/75 py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div data-aos="fade-right">
+              <p class="text-sm uppercase tracking-[0.35em] text-brand-300">Transformations</p>
+              <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">See the difference a professional clean makes</h2>
+              <p class="mt-5 text-lg leading-8 text-slate-300">Interactive before-and-after reveals how Elite Commercial Cleaning refreshes offices, rentals, and renovation spaces with premium finishing touches.</p>
+            </div>
+            <div class="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-glow" data-aos="fade-left">
+              <div class="relative overflow-hidden rounded-[1.75rem] border border-slate-800/70 bg-slate-950/90">
+                <div class="relative w-full" style="padding-bottom: 75%; height: 0;">
+                  <!-- Before image (base) -->
+                  <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80" alt="Before cleaning" loading="lazy" />
+                  
+                  <!-- After image (overlay with slider control) -->
+                  <div id="after-overlay" class="absolute inset-0 h-full w-full overflow-hidden" style="width: 50%;">
+                    <img class="h-full w-full object-cover" style="width: 200%; margin-left: -100%;" src="https://images.unsplash.com/photo-1584622181563-430f63602d4b?auto=format&fit=crop&w=1200&q=80" alt="After cleaning" loading="lazy" />
+                  </div>
+                  
+                  <!-- Slider handle -->
+                  <input id="before-after-slider" type="range" min="0" max="100" value="50" class="absolute inset-y-0 left-1/2 z-10 w-full cursor-pointer opacity-0" style="top: 0; height: 100%;" aria-label="Before after slider" />
+                  
+                  <!-- Visual slider line -->
+                  <div class="absolute inset-y-0 left-1/2 w-1 bg-white transform -translate-x-1/2 pointer-events-none"></div>
+                  
+                  <!-- Labels -->
+                  <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                    <div class="inline-flex rounded-full bg-brand-500/15 px-3 py-1 text-sm uppercase tracking-[0.24em] text-brand-200">Before</div>
+                    <h3 class="mt-4 text-2xl font-semibold">Professional cleaning transformation</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div class="grid gap-6 sm:grid-cols-3">
+          <div class="glass-card rounded-[2rem] p-8 text-center shadow-soft" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Jobs completed</p>
+            <p class="mt-5 text-4xl font-semibold text-white" data-target="512">512+</p>
+          </div>
+          <div class="glass-card rounded-[2rem] p-8 text-center shadow-soft" data-aos="fade-up" data-aos-delay="150">
+            <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Responses</p>
+            <p class="mt-5 text-4xl font-semibold text-white" data-target="24">24/7</p>
+          </div>
+          <div class="glass-card rounded-[2rem] p-8 text-center shadow-soft" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-sm uppercase tracking-[0.3em] text-slate-400">Local clients</p>
+            <p class="mt-5 text-4xl font-semibold text-white" data-target="500">500+</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="relative overflow-hidden border-t border-slate-800/60 bg-slate-950/80 py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[0.9fr_0.9fr] lg:items-end">
+            <div data-aos="fade-right">
+              <p class="text-sm uppercase tracking-[0.35em] text-brand-300">Client feedback</p>
+              <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Google-style reviews from local customers</h2>
+              <p class="mt-5 max-w-xl text-slate-300">Real homeowners, Airbnb hosts and office managers praise the reliable service, trustworthiness and quick communication.</p>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="100">
+                <div class="flex items-center gap-4">
+                  <img class="h-12 w-12 rounded-2xl object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Customer avatar" loading="lazy" />
+                  <div>
+                    <p class="font-semibold text-white">Elena M.</p>
+                    <p class="text-sm text-slate-400">Airbnb host</p>
+                  </div>
+                </div>
+                <p class="mt-5 text-slate-300">"Elite Commercial Cleaning transformed my rental in one visit. Guests love the spotless check-ins and fast follow-up."</p>
+                <div class="mt-5 text-brand-400">★★★★★</div>
+              </div>
+              <div class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="150">
+                <div class="flex items-center gap-4">
+                  <img class="h-12 w-12 rounded-2xl object-cover" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=100&q=80" alt="Customer avatar" loading="lazy" />
+                  <div>
+                    <p class="font-semibold text-white">Jason K.</p>
+                    <p class="text-sm text-slate-400">Office manager</p>
+                  </div>
+                </div>
+                <p class="mt-5 text-slate-300">"Dependable, detail-focused, and always on schedule. The team is a true partner for our workplace."</p>
+                <div class="mt-5 text-brand-400">★★★★★</div>
+              </div>
+              <div class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="200">
+                <div class="flex items-center gap-4">
+                  <img class="h-12 w-12 rounded-2xl object-cover" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=100&q=80" alt="Customer avatar" loading="lazy" />
+                  <div>
+                    <p class="font-semibold text-white">Maria S.</p>
+                    <p class="text-sm text-slate-400">Commercial client</p>
+                  </div>
+                </div>
+                <p class="mt-5 text-slate-300">"They handled our remodel cleanup flawlessly. The space looked premium and ready for business day one."</p>
+                <div class="mt-5 text-brand-400">★★★★★</div>
+              </div>
+              <div class="glass-card rounded-[2rem] p-6 shadow-soft" data-aos="zoom-in" data-aos-delay="250">
+                <div class="flex items-center gap-4">
+                  <img class="h-12 w-12 rounded-2xl object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Customer avatar" loading="lazy" />
+                  <div>
+                    <p class="font-semibold text-white">Sophie L.</p>
+                    <p class="text-sm text-slate-400">Clinic owner</p>
+                  </div>
+                </div>
+                <p class="mt-5 text-slate-300">"Exceptional hygiene standards, friendly staff and excellent communication every step of the way."</p>
+                <div class="mt-5 text-brand-400">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking form -->
+      <section id="contact" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.95fr_0.85fr] lg:items-center">
+          <div data-aos="fade-right">
+            <p class="text-sm uppercase tracking-[0.35em] text-brand-300">Book now</p>
+            <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Request your quotes or schedule service</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-300">Everything is priced by the job. Choose the service type, share your timeline, and Karen will follow up with a fast, transparent quote.</p>
+            <div class="mt-10 grid gap-4 sm:grid-cols-2">
+              <div class="glass-card rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Service lead</p>
+                <p class="mt-3 text-xl font-semibold text-white">Karen Ramírez</p>
+                <p class="mt-2 text-slate-400">Owner · Client care · Local east coast operations</p>
+              </div>
+              <div class="glass-card rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+                <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Service area</p>
+                <p class="mt-3 text-xl font-semibold text-white">Maryland · Virginia · Delaware</p>
+                <p class="mt-2 text-slate-400">Residential, office, move-out, remodel and construction cleanings.</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-glow" data-aos="fade-left">
+            <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-brand-500/30 to-transparent"></div>
+            <div class="relative rounded-[1.75rem] bg-slate-900/60 p-5 sm:p-6">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.24em] text-brand-200">Quick contact</p>
+                  <h3 class="mt-3 text-3xl font-semibold text-white">Chat + quote in seconds</h3>
+                </div>
+                <div class="rounded-3xl bg-brand-500/10 p-3 text-brand-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.848 11.848 0 0012 .2C5.66.2.93 4.92.93 11.25c0 1.98.52 3.92 1.5 5.64L.2 24l7.4-1.94a11.07 11.07 0 005.05 1.17h.01c6.35 0 11.07-4.72 11.07-11.07 0-2.96-1.15-5.74-3.12-7.58zM12 21.67h-.01a9.78 9.78 0 01-4.96-1.34l-.36-.22-4.39 1.15 1.18-4.34-.23-.36A9.77 9.77 0 012.29 11.25c0-5.38 4.38-9.76 9.76-9.76 2.61 0 5.07 1.02 6.91 2.86a9.66 9.66 0 012.86 6.9c.01 5.38-4.37 9.75-9.75 9.75zm5.34-7.78c-.29-.14-1.7-.84-1.97-.94-.27-.1-.47-.14-.67.14-.19.28-.75.94-.92 1.13-.17.2-.35.24-.65.08-.29-.14-1.23-.45-2.34-1.45-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.12-.6.12-.12.27-.31.41-.47.14-.16.18-.28.28-.47.1-.19.05-.35-.02-.49-.08-.14-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01-.2 0-.52.08-.79.37-.27.29-1.07 1.04-1.07 2.55 0 1.51 1.1 2.97 1.25 3.18.14.2 2.16 3.3 5.24 4.63.73.31 1.3.49 1.75.63.74.23 1.41.2 1.94.12.59-.09 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.08-.11-.28-.18-.58-.31z"/></svg>
+                </div>
+              </div>
+              <div class="mt-6 rounded-[1.5rem] border border-white/10 bg-slate-950/90 p-5 shadow-soft">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between text-sm text-slate-400">
+                    <span>WhatsApp reply</span>
+                    <span class="rounded-full bg-brand-500/10 px-3 py-1 text-brand-100">Fast</span>
+                  </div>
+                  <div class="rounded-3xl bg-slate-900/80 p-4 text-slate-200">
+                    <p class="text-sm leading-6">Hi Karen, I'm interested in a quote for move-out cleaning at my office.</p>
+                  </div>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-3xl border border-slate-800/80 bg-slate-900/75 p-4">
+                      <p class="text-sm text-slate-400">Instant replies</p>
+                      <p class="mt-2 font-semibold text-white"><span class="text-brand-300">1-2 min</span> response</p>
+                    </div>
+                    <div class="rounded-3xl border border-slate-800/80 bg-slate-900/75 p-4">
+                      <p class="text-sm text-slate-400">Job-based pricing</p>
+                      <p class="mt-2 font-semibold text-white">Custom quote</p>
+                    </div>
+                  </div>
+                  <div class="rounded-3xl border border-slate-800/80 bg-slate-900/75 p-4">
+                    <p class="text-sm text-slate-400">Fast booking</p>
+                    <p class="mt-1 text-white">Schedule same-day service in MD, VA, DE.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[0.95fr_0.85fr] lg:items-center">
+          <div data-aos="fade-right">
+            <p class="text-sm uppercase tracking-[0.35em] text-brand-300">FAQs</p>
+            <h2 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">Common questions answered</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-300">Quick answers to help you book confidently and understand how our service works.</p>
+          </div>
+          <div class="space-y-4" data-aos="fade-left">
+            <details class="glass-card rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft" open>
+              <summary class="cursor-pointer text-lg font-semibold text-white">Do you offer same-day cleaning?</summary>
+              <p class="mt-4 text-slate-300">Yes, same-day service is available whenever our schedule permits. Contact us on WhatsApp or phone to confirm the next available slot.</p>
+            </details>
+            <details class="glass-card rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+              <summary class="cursor-pointer text-lg font-semibold text-white">Can you clean commercial offices and clinics?</summary>
+              <p class="mt-4 text-slate-300">Absolutely. We specialize in offices, clinics, commercial spaces, construction clean-ups, and rental turnovers throughout MD, VA, and DE.</p>
+            </details>
+            <details class="glass-card rounded-[1.75rem] border border-white/10 bg-slate-950/80 p-6 shadow-soft">
+              <summary class="cursor-pointer text-lg font-semibold text-white">What is job-based pricing?</summary>
+              <p class="mt-4 text-slate-300">Each cleaning is quoted based on the property size, condition, and service requirements. That means no fixed packages unless you choose a recommended plan.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/14437366460?text=Hi%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services" target="_blank" rel="noreferrer" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-slate-950 shadow-[0_25px_70px_-30px_rgba(37,211,102,0.8)] transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg floating-pulse">
+      <span class="h-10 w-10 rounded-full bg-white/90 p-2 text-[#25D366] shadow-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M20.52 3.48A11.848 11.848 0 0012 .2C5.66.2.93 4.92.93 11.25c0 1.98.52 3.92 1.5 5.64L.2 24l7.4-1.94a11.07 11.07 0 005.05 1.17h.01c6.35 0 11.07-4.72 11.07-11.07 0-2.96-1.15-5.74-3.12-7.58zM12 21.67h-.01a9.78 9.78 0 01-4.96-1.34l-.36-.22-4.39 1.15 1.18-4.34-.23-.36A9.77 9.77 0 012.29 11.25c0-5.38 4.38-9.76 9.76-9.76 2.61 0 5.07 1.02 6.91 2.86a9.66 9.66 0 012.86 6.9c.01 5.38-4.37 9.75-9.75 9.75zm5.34-7.78c-.29-.14-1.7-.84-1.97-.94-.27-.1-.47-.14-.67.14-.19.28-.75.94-.92 1.13-.17.2-.35.24-.65.08-.29-.14-1.23-.45-2.34-1.45-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.12-.6.12-.12.27-.31.41-.47.14-.16.18-.28.28-.47.1-.19.05-.35-.02-.49-.08-.14-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01-.2 0-.52.08-.79.37-.27.29-1.07 1.04-1.07 2.55 0 1.51 1.1 2.97 1.25 3.18.14.2 2.16 3.3 5.24 4.63.73.31 1.3.49 1.75.63.74.23 1.41.2 1.94.12.59-.09 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.08-.11-.28-.18-.58-.31z"/></svg>
+      </span>
+      <span>Chat on WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/60 bg-slate-950/90 py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+          <div class="order-2 lg:order-1">
+            <a href="#home" class="inline-flex items-center gap-3 text-white">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-sky-700 shadow-glow">
+                <span class="text-xl font-bold">E</span>
+              </div>
+              <div>
+                <p class="text-sm uppercase tracking-[0.22em] text-brand-300">Elite Commercial Cleaning</p>
+                <p class="text-slate-400">Premium cleaning, honest quotes, local reliability.</p>
+              </div>
+            </a>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div>
+                <p class="text-sm uppercase tracking-[0.24em] text-slate-500">Contact</p>
+                <p class="mt-3 text-base text-slate-200">Karen Ramírez</p>
+                <p class="mt-2 text-slate-400">Eastern Shore of Maryland, Virginia & Delaware</p>
+                <p class="mt-2 flex items-center gap-2 text-slate-300"><span class="text-brand-400">📞</span>+1 (443) 736-6460</p>
+                <p class="mt-2 flex items-center gap-2 text-slate-300"><span class="text-brand-400">💬</span><a href="https://wa.me/14437366460?text=Hi%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services" target="_blank" rel="noreferrer" class="text-white underline decoration-brand-500/40">WhatsApp</a></p>
+                <p class="mt-2 text-slate-300">spiritworld17@gmail.com</p>
+              </div>
+              <div>
+                <p class="text-sm uppercase tracking-[0.24em] text-slate-500">Quick links</p>
+                <ul class="mt-4 space-y-3 text-slate-300">
+                  <li><a href="#services" class="transition hover:text-white">Services</a></li>
+                  <li><a href="#testimonials" class="transition hover:text-white">Reviews</a></li>
+                  <li><a href="#contact" class="transition hover:text-white">Book</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-soft">
+            <p class="text-sm uppercase tracking-[0.35em] text-brand-300">Ready to start?</p>
+            <h3 class="mt-4 text-3xl font-semibold text-white">Send a message or get your quote on WhatsApp</h3>
+            <p class="mt-4 text-slate-300">Professional cleaning for homes, offices, rentals, remodels and construction sites.</p>
+            <a href="https://wa.me/14437366460?text=Hi%20I%E2%80%99m%20interested%20in%20your%20cleaning%20services" target="_blank" rel="noreferrer" class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-brand-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.848 11.848 0 0012 .2C5.66.2.93 4.92.93 11.25c0 1.98.52 3.92 1.5 5.64L.2 24l7.4-1.94a11.07 11.07 0 005.05 1.17h.01c6.35 0 11.07-4.72 11.07-11.07 0-2.96-1.15-5.74-3.12-7.58zM12 21.67h-.01a9.78 9.78 0 01-4.96-1.34l-.36-.22-4.39 1.15 1.18-4.34-.23-.36A9.77 9.77 0 012.29 11.25c0-5.38 4.38-9.76 9.76-9.76 2.61 0 5.07 1.02 6.91 2.86a9.66 9.66 0 012.86 6.9c.01 5.38-4.37 9.75-9.75 9.75zm5.34-7.78c-.29-.14-1.7-.84-1.97-.94-.27-.1-.47-.14-.67.14-.19.28-.75.94-.92 1.13-.17.2-.35.24-.65.08-.29-.14-1.23-.45-2.34-1.45-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.12-.6.12-.12.27-.31.41-.47.14-.16.18-.28.28-.47.1-.19.05-.35-.02-.49-.08-.14-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01-.2 0-.52.08-.79.37-.27.29-1.07 1.04-1.07 2.55 0 1.51 1.1 2.97 1.25 3.18.14.2 2.16 3.3 5.24 4.63.73.31 1.3.49 1.75.63.74.23 1.41.2 1.94.12.59-.09 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.08-.11-.28-.18-.58-.31z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-slate-800/80 pt-8 text-center text-sm text-slate-500">
+          <p>© 2026 Elite Commercial Cleaning. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-GEQHz6OfYfCN5E9P3OGr2i2S3uor5omM86RGJQu6POh9g0vUe3ibST4OL6MiwY0eQXy3kqCoX6tYV1fnCV8EVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({ duration: 900, once: true, offset: 120 });
+
+        const mobileButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        const counters = document.querySelectorAll('[data-target]');
+        const speed = 40;
+        counters.forEach((counter) => {
+          const updateCount = () => {
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            const count = parseInt(counter.innerText.replace('+', ''), 10) || 0;
+            const inc = target / speed;
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc) + (counter.innerText.includes('+') ? '+' : '');
+              setTimeout(updateCount, 40);
+            } else {
+              counter.innerText = target + (counter.innerText.includes('+') ? '+' : '');
+            }
+          };
+          updateCount();
+        });
+
+        // Before/After Slider
+        const slider = document.getElementById('before-after-slider');
+        const overlay = document.getElementById('after-overlay');
+        
+        if (slider && overlay) {
+          const updateSlider = (value) => {
+            overlay.style.width = value + '%';
+          };
+          
+          slider.addEventListener('input', (e) => {
+            updateSlider(e.target.value);
+          });
+          
+          // Initialize
+          updateSlider(50);
+        }
+
+        const fadeIns = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.15 });
+        fadeIns.forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
